@@ -11,7 +11,7 @@
 
 ## Introduction
 As per our workshop, here’s three methods that allow you to increase the scale of your command line use by incorporating batch processing (`&&`, `for` loop, `find` loop). 
-WARNING - with great power comes great reponsibility! Always perform tests in an isolated environment, perhaps on a test folder on an external drive. Be incredibly careful when launching any batch process on archival material.
+**WARNING** - with great power comes great reponsibility! Always perform tests in an isolated environment, perhaps on a test folder on an external drive. Be incredibly careful when launching any batch process on archival material.
 
 ## &&
 - `mediainfo /users/kieran/Downloads/youghal_clock_tower_animation.mov && mediainfo /users/kieran/Downloads/hallowed_fire.mov`  
@@ -19,8 +19,8 @@ WARNING - with great power comes great reponsibility! Always perform tests in an
 This is one of the simplest methods for stringing commands together. You simply write out a list of commands that are linked with `&&`
 
 NOTE:
-`&&` means ‘run the next command if the previous command did not return an error.
-`&` A single `&` means : run the next command regardless of any errors.
+- `&&` means ‘run the next command if the previous command did not return an error.
+- `&` A single `&` means : run the next command regardless of any errors.
 
 ## For loop:
 This will loop through files in your current directory.
@@ -36,6 +36,7 @@ Breakdown:
 ## Intermediate: multiple command in your for loop:
 You can string together multiple commands in your loop as seen in this example:
 - `for i in /users/kieran/Downloads/*.mov ; do mediainfo "$i"; exiftool "$i"; md5deep "$i"; done`
+
 Which launches mediainfo, exiftool and md5deep.
 
 ## Intermediate: Pipe to files:
