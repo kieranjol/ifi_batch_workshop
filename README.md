@@ -42,7 +42,7 @@ Which launches mediainfo, exiftool and md5deep.
 The for loop examples so far will all just print information to your screen. If you wanted to redirect the information to a sidecar file, you would use piping.
 `for i in /users/kieran/Downloads/*.mov ; do mediainfo "$i" > “$i”_mediainfo.txt; done`
 So ` > “$i”_mediainfo.txt` means:
-Instead of printing information to screen, redirect the information to “$i”_mediainfo.txt`
+`Instead of printing information to screen, redirect the information to “$i”_mediainfo.txt`
 This results in the creation of a sidecar file with `_mediainfo.txt` appended to the filename. 
 
 ## Recursive loop (search through all subfolders)
