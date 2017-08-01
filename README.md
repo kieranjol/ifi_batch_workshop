@@ -42,13 +42,17 @@ Which launches mediainfo, exiftool and md5deep.
 
 ## Intermediate: Pipe to files:
 The for loop examples so far will all just print information to your screen. If you wanted to redirect the information to a sidecar file, you would use piping.
-- `for i in /users/kieran/Downloads/*.mov ; do mediainfo "$i" > “$i”_mediainfo.txt; done`
+- `for i in *.mov ; do mediainfo "$i" > “$i”_mediainfo.txt; done`
 
 So ` > “$i”_mediainfo.txt` means:
 
 "Instead of printing information to screen, redirect the information to `“$i”_mediainfo.txt` "
 
-This results in the creation of a sidecar file with `_mediainfo.txt` appended to the filename. 
+This results in the creation of a sidecar file with `_mediainfo.txt` appended to the filename.
+
+You can also specify a directory to perform the loop:
+
+- `for i in /users/kieran/Downloads/*.mov ; do mediainfo "$i" > “$i”_mediainfo.txt; done`
 
 ## Recursive loop (search through all subfolders)
 - `find /Users/kieran/Downloads/objects -name "*.md5" -exec validate.py {} \;`
