@@ -25,6 +25,7 @@ NOTE:
 ## For loop:
 This will loop through files in your current directory.
 - `for i in /users/kieran/Downloads/*.mov ; do mediainfo "$i"; done`
+
 Breakdown:
 - `for i in *.mov` - For all files that  end in .mov
 - `;` indicates the end of the first command 
@@ -64,6 +65,7 @@ You can replace `validate.py` with whatever command you’d like to execute, for
 ## Advanced - combining for and find for piping purposes
 
 It seems to be very difficult to pipe to a file when using find, but you can do the following 
-for i in `find /users/kieran/Downloads  -name "*.mov"`; do mediainfo "$i" > "$i".txt; done
-
+```
+for i in  `find /users/kieran/Downloads  -name "*.mov"`; do mediainfo "$i" > "$i".txt; done
+```
 This seems to go quite haywire when files or folders have spaces so use with caution!
