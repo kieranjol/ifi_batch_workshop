@@ -20,7 +20,7 @@ This is one of the simplest methods for stringing commands together. You simply 
 
 NOTE:
 - `&&` means ‘run the next command if the previous command did not return an error.
-- `&` A single `&` means : run the next command regardless of any errors.
+- `&` A single `&` means : run the next command in the background. Generally this should be avoided, especially when doing anything with an LTO tape.
 
 ## For loop:
 This will loop through files in your current directory.
